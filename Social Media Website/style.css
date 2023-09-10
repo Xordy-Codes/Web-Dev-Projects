@@ -337,32 +337,32 @@ z-index: 2;
 
 .middle .stories .story:nth-child(1)
 {
-    background: url(images/story-1.jpg)
+    background: url(images/mine/feed\ 4-min.jpg)
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(2)
 {
-    background: url(images/story-2.jpg)
+    background: url(images/mine/story\ 2.jpg)
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(3)
 {
-    background: url(images/story-3.jpg)
+    background: url(images/mine/story\ 1.jpg)
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(4)
 {
-    background: url(images/story-4.jpg)
+    background: url(images/mine/story\ anay.jpg)
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(5)
 {
-    background: url(images/story-5.jpg)
+    background: url(images/mine/pragya\ story-min.jpg)
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(6)
 {
-    background: url(images/story-6.jpg)
+    background: url(images/mine/div\ story.png)
     no-repeat center center/cover;
 }
 
@@ -421,7 +421,7 @@ z-index: 2;
     gap: 1rem;
 }
 
-.middle .feed .photo
+.middle .feed .photo 
 {
     border-radius: var(--card-border-radius);
     overflow: hidden;
