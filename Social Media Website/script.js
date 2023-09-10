@@ -4,7 +4,7 @@ const menuItems = document.querySelectorAll('.menu-item');
 //Messages
 const messagesNotification = document.querySelector('#messages-notification');
 const messages = document.querySelector('.messages');
-const message = messages.querySelectorAll('.messages');
+const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
 
 //theme
@@ -16,6 +16,10 @@ const colorPalette = document.querySelectorAll('.choose-color span');
 const Bg1 = document.querySelector('.bg-1');
 const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
+
+//image slider
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const dots = document.querySelectorAll(".dot");
 
 //remove active class  from all menu items
     const changeActiveItem = () => {
@@ -213,6 +217,38 @@ colorPalette.forEach(colorPicker => {
         Bg2.classList.remove('active');
         changeBG();
     })
+
+    let slideIndex = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((slide) => (slide.style.transform = `translateX(-${index * 100}%)`));
+
+    // Update the active dot
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  function goToSlide(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+  }
+
+  // Add event listeners for dot clicks
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
+  });
+
+  // Initial slide display
+  showSlide(slideIndex);
+
     
 
     
